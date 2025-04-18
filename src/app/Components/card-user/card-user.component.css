@@ -1,0 +1,12 @@
+.card.profile-card.shadow.mt-4 {
+    height: 325px;
+}
+
+h5.card-title {
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

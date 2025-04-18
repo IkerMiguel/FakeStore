@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="form-signin mt-5 d-flex justify-content-center">
+    <div class="w-100" style="max-width: 400px;">
+      <div class="text-center">
+        <i class="bi bi-person-circle fs-1 mb-3"></i>
+        <h1 class="h3 fw-normal">Login</h1>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="Email"
+          [value]="username"
+          #txtUsername
+        />
+        <label for="floatingInput">Email</label>
+      </div>
+  
+      <div class="form-floating mb-4">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+          [value]="password"
+          #txtPassword
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+      <button
+        class="w-100 btn btn-lg btn-primary"
+        (click)="login(txtUsername.value, txtPassword.value)"
+      >
+        Sign in
+      </button>
+  
+      <p class="mt-5 text-muted text-center">© 2025</p>
+    </div>
+  </div>
+  

@@ -12,12 +12,13 @@
                 <span class="h4 me-2">{{ product?.price | currency }}</span>
             </div>
             <div class="mb-3">
+                @for (star of createRange(rate); track $index) {
                 <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
+                }
+                @for (star of createRange(5 - rate); track $index) {
                 <i class="bi bi-star text-warning"></i>
-                <span class="ms-2">{{product?.rating?.rate}} ({{product?.rating?.count}} reviews)</span>
+                }
+                <span class="ms-2">{{rate}} ({{product?.rating?.count}} reviews)</span>
             </div>
             <p class="mb-4">{{product?.description}}</p>
             <div class="mb-4">

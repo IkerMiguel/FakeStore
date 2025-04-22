@@ -54,3 +54,7 @@ export interface Name {
     lastname:  string;
 }
 
+export interface ProductItemCart{
+    product: Product;
+    quantity: number;
+}
